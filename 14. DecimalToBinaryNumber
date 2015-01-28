@@ -1,0 +1,26 @@
+using System;
+
+class DecimalToBinaryNumber
+{
+    static void Main()
+    {
+        Console.Write("decimal = ");
+        long number = long.Parse(Console.ReadLine());
+        string represent = "";
+
+        if (number == 0)
+        {
+            Console.WriteLine(number);
+        }
+        else
+        {
+            while (number > 0)
+            {
+                int digit = (int)number & 1;
+                number >>= 1;
+                represent = digit.ToString() + represent;
+            }
+            Console.WriteLine("binary = {0}", represent);
+        }
+    }
+}
