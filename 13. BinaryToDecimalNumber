@@ -1,0 +1,21 @@
+using System;
+
+class BinaryToDecimalNumber
+{
+    static void Main()
+    {
+        Console.Write("binary = ");
+        string binaryNum = Console.ReadLine();
+        long decimalNum = 0;
+
+        for (int i = 0; i < binaryNum.Length; i++)
+        {
+            if (binaryNum[i] == '1')
+            {
+                double power = binaryNum.Length - 1 - i;
+                decimalNum = decimalNum + (long)Math.Pow(2, power);
+            }
+        }
+        Console.WriteLine("decimal = {0}", decimalNum);
+    }
+}
