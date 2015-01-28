@@ -1,0 +1,41 @@
+using System;
+using System.Numerics;
+
+class CatalanNumbers
+{
+    static void Main()
+    {
+        Console.Write("n = ");
+        int n = int.Parse(Console.ReadLine());
+
+        if (n >= 0 && n < 100)
+        {
+            BigInteger twoNFactorial = 1;
+            BigInteger nOneFactorial = 1;
+            BigInteger nFactorial = 1;
+            BigInteger division = 0;
+
+            for (int i = 1; i <= (n * 2); i++)
+            {
+                twoNFactorial *= i;
+            }
+
+            for (int j = 1; j <= (n + 1); j++)
+            {
+                nOneFactorial *= j;
+            }
+
+            for (int l = 1; l <= n; l++)
+            {
+                nFactorial *= l;
+            }
+
+            division = twoNFactorial / (nOneFactorial * nFactorial);
+            Console.WriteLine("Catalan(n) = {0}", division);
+        }
+        else
+        {
+            Console.WriteLine("Invalid input! Try again!");
+        }
+    }
+}
