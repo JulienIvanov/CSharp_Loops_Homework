@@ -1,0 +1,24 @@
+using System;
+
+class CalculatingExpressions1
+{
+    static void Main()
+    {
+        Console.Write("n = ");
+        int n = int.Parse(Console.ReadLine());
+        Console.Write("x = ");
+        int x = int.Parse(Console.ReadLine());
+
+        double nFactorial = 1;
+        double xPower = 1;
+        double sum = 1;
+
+        for (int i = 1; i <= n; i++)
+        {
+            nFactorial *= i;
+            xPower *= x;
+            sum += nFactorial / xPower;
+        }
+        Console.WriteLine("1 + 1!/X + 2!/X^2 + ... + N!/X^N = {0:F5}", sum);
+    }
+}
