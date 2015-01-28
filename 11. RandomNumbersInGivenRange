@@ -1,0 +1,29 @@
+using System;
+
+class RandomNumbersInGivenRange
+{
+    static void Main()
+    {
+        Console.Write("n = ");
+        int n = int.Parse(Console.ReadLine());
+        Console.Write("min = ");
+        int min = int.Parse(Console.ReadLine());
+        Console.Write("max = ");
+        int max = int.Parse(Console.ReadLine());
+        Random createRandom = new Random();
+
+        if (min <= max)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                int randomNumber = createRandom.Next(min, max + 1);
+                Console.Write("{0} ", randomNumber);
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Try again!");
+        }
+        Console.WriteLine();
+    }
+}
