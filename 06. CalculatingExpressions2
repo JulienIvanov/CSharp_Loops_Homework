@@ -1,0 +1,36 @@
+using System;
+using System.Numerics;
+
+class CalculatingExpressions2
+{
+    static void Main()
+    {
+        Console.Write("n = ");
+        int n = int.Parse(Console.ReadLine());
+        Console.Write("x = ");
+        int k = int.Parse(Console.ReadLine());
+
+        if ((n > 1) && (k > 1) && (n > k) && (n < 100) && (k < 100))
+        {
+            BigInteger nFactorial = 1;
+            BigInteger kFactorial = 1;
+            BigInteger division = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                nFactorial *= i;
+            }
+            for (int j = 1; j <= k; j++)
+                {
+                    kFactorial *= j;
+                }
+
+            division = nFactorial / kFactorial;
+            Console.WriteLine("n! / k! = {0}", division);
+        }
+        else
+        {
+            Console.WriteLine("Invalid input.Try again!");
+        }
+    }
+}
