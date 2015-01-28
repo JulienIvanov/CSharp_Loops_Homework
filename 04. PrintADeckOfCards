@@ -1,0 +1,36 @@
+using System;
+
+class PrintADeckOfCards
+{
+    static void Main()
+    {
+        char clubs = (char)9827;
+        char diamonds = (char)9830;
+        char hearts = (char)9829;
+        char spades = (char)9824;
+
+        for (int i = 2; i <= 10; i++)
+        {
+            Console.WriteLine(i + "{0} " + i + "{1} " + i + "{2} " + i + "{3}", clubs, diamonds, hearts, spades);
+        }
+
+        for (int k = 1; k <= 4; k++)
+        {
+            switch (k)
+            {
+                case 1:
+                    Console.WriteLine("J{0} J{1} J{2} J{3}", clubs, diamonds, hearts, spades);
+                    break;
+                case 2:
+                    Console.WriteLine("Q{0} Q{1} Q{2} Q{3}", clubs, diamonds, hearts, spades);
+                    break;
+                case 3:
+                    Console.WriteLine("K{0} K{1} K{2} K{3}", clubs, diamonds, hearts, spades);
+                    break;
+                case 4:
+                    Console.WriteLine("A{0} A{1} A{2} A{3}", clubs, diamonds, hearts, spades);
+                    break;
+            }
+        }
+    }
+}
